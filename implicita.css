@@ -1,0 +1,31 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 1fr 200px;/*grid explicita*/
+    grid-template-rows: 200px 100px 200px;/*grid explicita en la cual estamos especificando
+    la cantidad de filas y columnas del contenedor*/
+
+    /*grid implicita , cuando agregamos un elemento mas o un div, se agrega de manera 
+    automatica debajo o a la derecha*/
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+
+    /*grid-auto-flow: row;/*alinea los elementos extra en un conteo de arriba hacia abajo*/
+    
+    /*al quedar espacios en blanco en el contenedor se pueden rellenar con esta 
+    propiedad se esta trabajando para las filas(row dense) pero tambien se puede trabajar
+    para las columnas (column dense)*/
+    grid-auto-flow: row dense; 
+}
+
+.contenedor .span-2 {
+    grid-column: span 2;
+    /*grid-row: span 2;*/
+    background: #ff8000;
+}
+
+.contenedor .span-3 {
+    grid-column: span 3;
+    /*grid-row: span 3;*/
+    background: #575757;
+}
